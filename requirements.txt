@@ -1,0 +1,10 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+sqlalchemy>=2.0
+psycopg[binary]>=3.2
+google-genai>=2.25
+httpx>=0.27
+beautifulsoup4>=4.12
+ddgs
+python-dotenv>=1.0
+pytest>=8.0

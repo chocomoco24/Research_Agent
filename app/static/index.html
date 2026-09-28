@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Agent</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Research Agent</h1>
+      <p class="subtitle">Ask a research question. The agent searches the web, reads sources and writes an answer.</p>
+    </header>
+
+    <form id="goal-form" class="card">
+      <label for="goal">Research goal</label>
+      <textarea id="goal" rows="3" placeholder="e.g. Find out what changed in Python 3.13 and summarize the top 5 points." required></textarea>
+      <div class="form-row">
+        <span id="form-error" class="error"></span>
+        <button type="submit" id="run-button">Run</button>
+      </div>
+    </form>
+
+    <section id="run-view" class="card hidden">
+      <div class="run-header">
+        <h2 id="run-title">Run</h2>
+        <span id="run-status" class="badge"></span>
+      </div>
+      <p id="run-goal" class="goal"></p>
+      <p id="run-meta" class="meta"></p>
+
+      <h3>Answer</h3>
+      <div id="run-answer" class="answer"></div>
+
+      <h3>Steps</h3>
+      <ol id="run-steps" class="steps"></ol>
+    </section>
+
+    <section class="card">
+      <div class="run-header">
+        <h2>Recent runs</h2>
+        <button type="button" id="refresh-button" class="secondary">Refresh</button>
+      </div>
+      <ul id="recent-runs" class="recent"></ul>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
